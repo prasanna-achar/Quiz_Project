@@ -44,3 +44,83 @@ a{
 a:hover{
     color: #fff;
 }
+/* Styling the container for each question */
+.questionSection {
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin: 16px 0;
+    padding: 16px;
+    background-color: #f9f9f9;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  
+  .questionSection:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 6px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  /* Styling the question text */
+  .questionSection h2 {
+    font-size: 1.2rem;
+    margin-bottom: 12px;
+    color: #333;
+  }
+  
+  /* Styling the options container */
+  .OptionsSect {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+  }
+  
+  /* Styling individual options (radio buttons) */
+  .option {
+    display: none; /* Hide the default radio button */
+  }
+  
+  .option + label {
+    display: inline-block;
+    padding: 8px 12px;
+    background-color: #ffffff;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+  }
+  
+  /* Add hover and focus styles for better interaction */
+  .option + label:hover {
+    background-color: #f0f0f0;
+    border-color: #bbb;
+  }
+  
+  /* Style for selected options */
+  .option:checked + label {
+    background-color: #007bff;
+    color: #fff;
+    border-color: #0056b3;
+  }
+  
+  /* Aligning options within the container */
+  .OptionsSect label {
+    width: 100%;
+    text-align: left;
+    font-size: 1rem;
+  }
+  
+  /* Responsive design */
+  @media (max-width: 600px) {
+    .questionSection {
+      padding: 12px;
+    }
+  
+    .questionSection h2 {
+      font-size: 1rem;
+    }
+  
+    .OptionsSect label {
+      font-size: 0.9rem;
+    }
+  }
+  
